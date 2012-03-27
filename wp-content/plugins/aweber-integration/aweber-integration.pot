@@ -1,0 +1,271 @@
+# Copyright (C) 2010 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/aweber-integration\n"
+"POT-Creation-Date: 2011-06-20 02:50:30+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: om4-aweber.php:131 om4-aweber.php:132
+msgid "AWeber"
+msgstr ""
+
+#: om4-aweber.php:203
+msgid ""
+"Please log into your AWeber account, navigate to Reports -> Settings, and "
+"ensure the web site address field contains the following: <code>%s</code>"
+msgstr ""
+
+#: om4-aweber.php:208
+msgid "AWeber Sidebar Widget"
+msgstr ""
+
+#: om4-aweber.php:209
+msgid ""
+"The AWeber sidebar widget(s) are available for use on the <a href=\"%s"
+"\">widgets management page</a>."
+msgstr ""
+
+#: om4-aweber.php:211
+msgid "AWeber Analytics (optional)"
+msgstr ""
+
+#: om4-aweber.php:212
+msgid ""
+"Enter your AWeber account ID below if you wish to enable <a href=\"http://"
+"www.aweber.com/email-analytics.htm\" target=\"_blank\">AWeber Email Web "
+"Analytics</a> on your site."
+msgstr ""
+
+#: om4-aweber.php:213
+msgid ""
+"Your account ID can be found by logging into your AWeber account, clicking "
+"on Reports, then Settings. Your account ID is displayed in the text box, and "
+"is the alphanumeric code after the <code>?id=</code> code. <a href=\"http://"
+"www.aweber.com/faq/questions/523/How+Do+I+Install+Email+Web+Analytics%3F\" "
+"target=\"_blank\">More information</a>."
+msgstr ""
+
+#: om4-aweber.php:214
+msgid ""
+"If you don't have the Reports &rArr; Settings menu in your AWeber account, "
+"you are probably on an old AWeber account package. You will need to contact "
+"AWeber support to get your account upgraded to a new plan that includes the "
+"analytics option."
+msgstr ""
+
+#: om4-aweber.php:227
+msgid "AWeber Account ID:"
+msgstr ""
+
+#: om4-aweber.php:228
+msgid "(letters and numbers only)"
+msgstr ""
+
+#: om4-aweber.php:231
+msgid ""
+"Once you have entered your AWeber account ID, the AWeber Analytics tracking "
+"code will be automatically added to every page on your website."
+msgstr ""
+
+#: om4-aweber.php:233
+msgid "Save Changes"
+msgstr ""
+
+#: om4-aweber.php:234
+msgid "Click the button below to save your changes."
+msgstr ""
+
+#: om4-aweber.php:236
+msgid "Save Options"
+msgstr ""
+
+#: om4-aweber.php:275
+msgid ""
+"Old AWeber widget format. The Javascript snippet widget should be used "
+"instead."
+msgstr ""
+
+#: om4-aweber.php:277
+msgid "AWeber Mailing List (Raw HTML)"
+msgstr ""
+
+#: om4-aweber.php:362
+msgid "Name:"
+msgstr ""
+
+#: om4-aweber.php:363
+msgid "Email:"
+msgstr ""
+
+#: om4-aweber.php:364
+msgid "Submit"
+msgstr ""
+
+#: om4-aweber.php:463
+msgid ""
+"If you are experiencing issues with this RAW HTML widget, the new Javascript "
+"snippet widget can be used instead. <a href=\"%s\" target=\"_blank\">Click "
+"here for instructions</a>."
+msgstr ""
+
+#: om4-aweber.php:464
+msgid ""
+"This widget allows you to add an <a href=\"http://smartmail.aweber.com\" "
+"target=\"_blank\">AWeber</a> Web Subscription Form to the sidebar of your "
+"site."
+msgstr ""
+
+#: om4-aweber.php:465
+msgid ""
+"Note: This widget currently only supports web forms with a name and email "
+"field."
+msgstr ""
+
+#: om4-aweber.php:466
+msgid "AWeber Variables (required)"
+msgstr ""
+
+#: om4-aweber.php:467
+msgid ""
+"The following fields can be found by logging into AWeber, selecting the "
+"appropriate list, clicking on Web Forms &rarr; Get HTML &rarr; Raw HTML "
+"Version."
+msgstr ""
+
+#: om4-aweber.php:468
+msgid "<b>Unit</b> (letters, numbers and hyphens only)"
+msgstr ""
+
+#: om4-aweber.php:469
+msgid ""
+"For example, your unit is the word in red (excluding quotation marks) in the "
+"following example:<br /><code>&lt;input type=\"hidden\" name=\"unit\" value="
+"\"<font color=\"red\">default537640</font>\"&gt;</code>"
+msgstr ""
+
+#: om4-aweber.php:472
+msgid "Form ID</b> (numbers only)"
+msgstr ""
+
+#: om4-aweber.php:473
+msgid ""
+"For example, your Form ID is the number in red (excluding quotation marks) "
+"in the following example:<br /><code>&lt;input type=\"hidden\" name="
+"\"meta_web_form_id\" value=\"<font color=\"red\">574060174</font>\"&gt;</"
+"code>"
+msgstr ""
+
+#: om4-aweber.php:476
+msgid "Optional Settings"
+msgstr ""
+
+#: om4-aweber.php:477
+msgid "<b>Widget Title</b> (Optional)"
+msgstr ""
+
+#: om4-aweber.php:477
+msgid "(eg. Subscribe to our newsletter)"
+msgstr ""
+
+#: om4-aweber.php:479
+msgid "<b>Message</b>  (Optional)"
+msgstr ""
+
+#: om4-aweber.php:480
+msgid ""
+"Displayed above the name and email text fields. (eg. Subscribe to our "
+"mailing list for free)<br />Basic HTML is allowed."
+msgstr ""
+
+#: om4-aweber.php:482
+msgid "<b>Button Text</b>  (Optional)"
+msgstr ""
+
+#: om4-aweber.php:483
+msgid "The text label for the submit button. (eg. Subscribe)"
+msgstr ""
+
+#: om4-aweber.php:486
+msgid "<b>Confirmation / Thank You Page</b> (Optional)"
+msgstr ""
+
+#: om4-aweber.php:487
+msgid ""
+"This is the page that visitors will be redirected to after they complete the "
+"form. The <a href=\"http://www.aweber.com/thankyou-coi.htm?m=text\" target="
+"\"_blank\">default AWeber page</a> will be used if this isn't set."
+msgstr ""
+
+#: om4-aweber.php:488 om4-aweber.php:492
+msgid "- Select -"
+msgstr ""
+
+#: om4-aweber.php:490
+msgid "<b>Already Subscribed Page</b> (Optional)"
+msgstr ""
+
+#: om4-aweber.php:491
+msgid ""
+"This is the page that visitors will be redirected to if they submit an email "
+"address that is already subscribed to the mailing list. The <a href=\"http://"
+"www.aweber.com/form-sorry.htm?message=already_subscribed_1\" target=\"_blank"
+"\">default AWeber page</a> will be used if this isn't set."
+msgstr ""
+
+#: om4-aweber.php:494
+msgid "<b>Text Below Form</b>  (Optional)"
+msgstr ""
+
+#: om4-aweber.php:495
+msgid ""
+"Displayed below the subscription form. (eg. Read our &lt;a href=\"/"
+"newsletter/\"&gt;current newsletter&lt;/a&gt;)<br />Basic HTML is allowed."
+msgstr ""
+
+#: om4-aweber.php:524
+msgid "Settings"
+msgstr ""
+
+#: om4-aweber.php:568
+msgid "Add an AWeber mailing list subscription form to your site"
+msgstr ""
+
+#: om4-aweber.php:574
+msgid "AWeber Mailing List (Javascript Snippet)"
+msgstr ""
+
+#: om4-aweber.php:576
+msgid "Subscribe"
+msgstr ""
+
+#: om4-aweber.php:622
+msgid ""
+"This widget allows you to add an <a href=\"http://smartmail.aweber.com\" "
+"target=\"_blank\">AWeber</a> Web Subscription Form to a sidebar on your "
+"website."
+msgstr ""
+
+#: om4-aweber.php:623
+msgid ""
+"You need to configure your subscription form by logging into your AWeber "
+"account. Once logged in, select the appropriate list, then click on Web "
+"Forms. Click on the name of an existing web form (or create a new one). When "
+"designing your web form, be sure to set it's width to be smaller than the "
+"width of your sidebar. Once you have configured your web form, paste the "
+"entire Javascript Snippet into the box below."
+msgstr ""
+
+#: om4-aweber.php:625
+msgid "Title (optional):"
+msgstr ""
+
+#: om4-aweber.php:629
+msgid "Javascript Snippet (required):"
+msgstr ""
