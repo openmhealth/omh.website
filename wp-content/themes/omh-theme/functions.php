@@ -740,7 +740,7 @@ class omh_latest_posts extends WP_Widget {
     //  $q_args = array('numberposts' => 5);
     //else
     //  $q_args = array('numberposts' => 3);
-    $q_args = array('numberposts' => 3, 'category' => 1);
+    $q_args = array('numberposts' => 3, 'category' => 13);
     $myposts = get_posts($q_args);
     foreach ($myposts as $post) : setup_postdata($post);
       ?>
@@ -903,7 +903,7 @@ class more_contributors extends WP_Widget {
     echo "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
-    $q_args = array('numberposts' => 3, 'category' => 7);
+    $q_args = array('numberposts' => 3, 'category' => 7, 'order' => 'ASC');
     $myposts = get_posts($q_args);
     foreach ($myposts as $post) : setup_postdata($post);
       ?>
@@ -1009,7 +1009,10 @@ class semiFooterWidget extends WP_Widget {
     echo "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
-    $q_args = array('numberposts' => 3, 'category' => $cat);
+    if ($cat == 7)
+      $q_args = array('numberposts' => 3, 'category' => $cat, 'order' => 'ASC');
+    else
+      $q_args = array('numberposts' => 3, 'category' => $cat);
     $myposts = get_posts($q_args);
     foreach ($myposts as $post) : setup_postdata($post);
       ?>

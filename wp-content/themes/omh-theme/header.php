@@ -160,6 +160,14 @@ if ($paged >= 2 || $page >= 2)
           $("#nameField, #emailField").focus(function(){
             $(this).css("background", 
               "url(/wp-content/themes/omh-theme/images/home-input-field.png)")
+          }).blur(function(){
+            var elm = $(this)
+            if(elm.val() != "")
+              elm.css("background", 
+              "url(/wp-content/themes/omh-theme/images/home-input-field.png)")
+            else
+              elm.css("background","") 
+              
           })
         })
         
