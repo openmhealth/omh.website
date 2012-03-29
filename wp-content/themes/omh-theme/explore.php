@@ -85,6 +85,6 @@ get_header();
 
 <div class="semiFooterRow">
   <?php the_widget('semiFooterWidget', 'cat=7&title=Our Contributors'); ?> 
-  <a class="meet" href="/category/contributors/">meet more of our contributors</a>
+  <a class="meet" href="/category/contributor/">meet more of our contributors</a>
 </div>
 <?php get_footer(); ?>

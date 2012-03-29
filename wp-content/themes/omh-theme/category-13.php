@@ -28,7 +28,8 @@ get_header();
 
       <?php twentyeleven_content_nav('nav-above'); ?>
 
-    <h1>The Blog</h1>
+    <h1 class="entry-title">The Blog</h1>
+    <br/>
       <?php /* Start the Loop */ ?>
       <?php while (have_posts()) : the_post(); ?>
 

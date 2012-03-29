@@ -15,7 +15,9 @@ get_header();
     <?php if (have_posts()) : ?>
 
       <header class="page-header">
-        <h1 class="entry-title">Contributors</h1>
+        <h1 class="page-title"><?php
+    printf(__('Category Archives: %s', 'twentyeleven'), '<span>' . single_cat_title('', false) . '</span>');
+      ?></h1>
 
         <?php
         $category_description = category_description();
@@ -26,36 +28,27 @@ get_header();
 
       <?php twentyeleven_content_nav('nav-above'); ?>
 
+    <h1 class="entry-title">Our Contributors</h1>
+    <br/>
       <?php /* Start the Loop */ ?>
-      <ul class="appsProjects">
       <?php while (have_posts()) : the_post(); ?>
-        <?php //while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-          <li>
-            <div class="postThumbnail">
-              <a href="<?php the_permalink(); ?>">    
-                <?php the_post_thumbnail('medium'); ?>
-              </a>
-            </div>
+        <div>
+          <div class="postThumbnail">
+            <a href="<?php the_permalink(); ?>">    
+              <?php the_post_thumbnail('medium'); ?>
+            </a>
+          </div>
 
-            <div class="title">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </div>
-            <div class="description">
-              <?php the_excerpt(); ?>
-            </div>
-          </li>
+          <div class="title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </div>
+          <div class="description">
+            <?php the_excerpt(); ?>
+          </div>
+        </div>
 
-          <?php
-          /* Include the Post-Format-specific template for the content.
-           * If you want to overload this in a child theme then include a file
-           * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-           */
-          //get_template_part('content', get_post_format());
-          ?>
-
-        <?php endwhile; ?>
-      </ul>
+      <?php endwhile; ?>
 
       <?php twentyeleven_content_nav('nav-below'); ?>
 
@@ -79,7 +72,7 @@ get_header();
 
 <?php // get_sidebar(); ?>
 <div class="semiFooterRow">
-  <?php the_widget('omh_latest_posts'); ?> 
-  <a class="meet" href="/category/uncategorized/">more posts</a>
+  <?php the_widget('semiFooterWidget', 'cat=13&title=Blog Articles'); ?> 
+  <a class="meet" href="/category/blog/">more articles</a>
 </div>
 <?php get_footer(); ?>
