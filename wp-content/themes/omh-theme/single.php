@@ -52,6 +52,4 @@ get_header();
     <a class="meet" href="/category/contributor/">meet more of our contributors</a>
   <?php endif; ?>
 </div>
-
-
 <?php get_footer(); ?>

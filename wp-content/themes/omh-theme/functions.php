@@ -224,7 +224,7 @@ if (!function_exists('twentyeleven_header_style')) :
       ?>
         #site-title a,
         #site-description {
-          color: #<?php echo get_header_textcolor(); ?> !important;
+          color: #<?php print get_header_textcolor(); ?> !important;
         }
     <?php endif; ?>
     </style>
@@ -271,7 +271,7 @@ if (!function_exists('twentyeleven_admin_header_style')) :
         ?>
         #site-title a,
         #site-description {
-          color: #<?php echo get_header_textcolor(); ?>;
+          color: #<?php print get_header_textcolor(); ?>;
         }
       <?php endif; ?>
       #headimg img {
@@ -303,13 +303,13 @@ if (!function_exists('twentyeleven_admin_header_image')) :
       else
         $style = ' style="color:#' . get_theme_mod('header_textcolor', HEADER_TEXTCOLOR) . ';"';
       ?>
-      <h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-      <div id="desc"<?php echo $style; ?>><?php bloginfo('description'); ?></div>
+      <h1><a id="name"<?php print $style; ?> onclick="return false;" href="<?php print esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
+      <div id="desc"<?php print $style; ?>><?php bloginfo('description'); ?></div>
       <?php
       $header_image = get_header_image();
       if (!empty($header_image)) :
         ?>
-        <img src="<?php echo esc_url($header_image); ?>" alt="" />
+        <img src="<?php print esc_url($header_image); ?>" alt="" />
       <?php endif; ?>
     </div>
     <?php
@@ -444,7 +444,7 @@ if (!function_exists('twentyeleven_content_nav')) :
 
     if ($wp_query->max_num_pages > 1) :
       ?>
-      <nav id="<?php echo $nav_id; ?>">
+      <nav id="<?php print $nav_id; ?>">
         <h3 class="assistive-text"><?php _e('Post navigation', 'twentyeleven'); ?></h3>
         <div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&larr;</span> Older posts', 'twentyeleven')); ?></div>
         <div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&rarr;</span>', 'twentyeleven')); ?></div>
@@ -498,7 +498,7 @@ function twentyeleven_footer_sidebar_class() {
   }
 
   if ($class)
-    echo 'class="' . $class . '"';
+    print 'class="' . $class . '"';
 }
 
 if (!function_exists('twentyeleven_comment')) :
@@ -534,7 +534,7 @@ if (!function_exists('twentyeleven_comment')) :
                 if ('0' != $comment->comment_parent)
                   $avatar_size = 39;
 
-                echo get_avatar($comment, $avatar_size);
+                print get_avatar($comment, $avatar_size);
 
                 /* translators: 1: comment author, 2: date and time */
                 printf(__('%1$s on %2$s <span class="says">said:</span>', 'twentyeleven'), sprintf('<span class="fn">%s</span>', get_comment_author_link()), sprintf('<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>', esc_url(get_comment_link($comment->comment_ID)), get_comment_time('c'),
@@ -601,10 +601,6 @@ if (!function_exists('twentyeleven_comment')) :
   }
 
   add_filter('body_class', 'twentyeleven_body_classes');
-  ?>
-
-
-  <?php
   /*
    * ****************************************************************************
    */
@@ -625,9 +621,9 @@ if (!function_exists('twentyeleven_comment')) :
     }
 
     function widget($args, $instance) {
-      echo "<div class='postWidget'>";
-      echo "<h2>Featured Project</h2>";
-      echo "<ul class='postWidget'>";
+      print "<div class='postWidget'>";
+      print "<h2>Featured Project</h2>";
+      print "<ul class='postWidget'>";
       global $post;
       $tmp_post = $post;
       $q_args = array('numberposts' => 1, 'category' => 6);
@@ -637,28 +633,26 @@ if (!function_exists('twentyeleven_comment')) :
       <li>
         <div class="postThumbnail">
           <a href="<?php the_permalink(); ?>">    
-            <?php the_post_thumbnail('large'); ?>
+      <?php the_post_thumbnail('large'); ?>
           </a>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }
 
 register_widget('omh_featured_project');
-?>
 
-<?php
 /*
  * ****************************************************************************
  */
@@ -679,9 +673,9 @@ class omh_contributors extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    echo "<div class='postWidget'>";
-    echo "<h2>Our Contributors</h2>";
-    echo "<ul class='postWidget'>";
+    print "<div class='postWidget'>";
+    print "<h2>Our Contributors</h2>";
+    print "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
     $q_args = array('numberposts' => 3, 'category' => 7);
@@ -690,27 +684,25 @@ class omh_contributors extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-          <?php the_post_thumbnail('large'); ?>
+      <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }
 
 register_widget('omh_contributors');
-?>
 
-<?php
 /*
  * ****************************************************************************
  */
@@ -731,9 +723,9 @@ class omh_latest_posts extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    echo "<div class='postWidget'>";
-    echo "<h2>Latest Posts</h2>";
-    echo "<ul class='postWidget'>";
+    print "<div class='postWidget'>";
+    print "<h2>Latest Posts</h2>";
+    print "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
     //if (is_singular())
@@ -746,27 +738,25 @@ class omh_latest_posts extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-          <?php the_post_thumbnail('large'); ?>
+      <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }
 
 register_widget('omh_latest_posts');
-?>
 
-<?php
 /*
  * ****************************************************************************
  */
@@ -787,38 +777,18 @@ class omh_featured_project_titles extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    echo "<div class='projectWidget projectTitles'>";
-    echo "<h2>Apps & Projects</h2>";
-    echo "<ul>";
-    echo do_shortcode('[pods name="project" template="project_widget_title" limit="1"]');
-    echo "</ul>";
-    echo "</div>";
+    print "<div class='projectWidget projectTitles'>";
+    print "<h2>Apps & Projects</h2>";
+    print "<ul>";
+    print do_shortcode('[pods name="project" template="project_widget_title" limit="1"]');
+    print "</ul>";
+    print "</div>";
   }
 
 }
 
 register_widget('omh_featured_project_titles');
-?>
 
-
-
-
-<?php
-/* * *************************************************************************** */
-
-function wpr_maintenance_mode() {
-  if (!current_user_can('edit_themes') || !is_user_logged_in()) {
-    wp_die('Please login <a href="/wp-login.php?redirect_to=/">here</a>.');
-  }
-}
-
-add_action('get_header', 'wpr_maintenance_mode');
-?>
-<?php
-/* * *************************************************************************** */
-?>
-
-<?php
 /*
  * ****************************************************************************
  *
@@ -872,11 +842,9 @@ register_sidebar(array(
 ));
 
 function shout() {
-  echo 'shout!';
+  print 'shout!';
 }
 ?>
-
-
 <?php
 /*
  * ****************************************************************************
@@ -898,9 +866,9 @@ class more_contributors extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    echo "<div class='postWidget'>";
-    echo "<h2>More Contributors</h2>";
-    echo "<ul class='postWidget'>";
+    print "<div class='postWidget'>";
+    print "<h2>More Contributors</h2>";
+    print "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
     $q_args = array('numberposts' => 3, 'category' => 7, 'order' => 'ASC');
@@ -909,28 +877,24 @@ class more_contributors extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-          <?php the_post_thumbnail('large'); ?>
+      <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }
 
 register_widget('more_contributors');
-?>
-
-
-<?php
 /*
  * ****************************************************************************
  */
@@ -951,9 +915,9 @@ class applications extends WP_Widget {
   }
 
   function widget($args, $instance) {
-    echo "<div class='postWidget'>";
-    echo "<h2>Applications</h2>";
-    echo "<ul class='postWidget'>";
+    print "<div class='postWidget'>";
+    print "<h2>Applications</h2>";
+    print "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
     $q_args = array('numberposts' => 3, 'category' => 8);
@@ -962,19 +926,19 @@ class applications extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-          <?php the_post_thumbnail('large'); ?>
+      <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }
@@ -1004,9 +968,9 @@ class semiFooterWidget extends WP_Widget {
   function widget($instance, $args) {
     $title = $args['title'];
     $cat = intval($args['cat']);
-    echo "<div class='postWidget'>";
-    echo "<h2>" . $title . "</h2>";
-    echo "<ul class='postWidget'>";
+    print "<div class='postWidget'>";
+    print "<h2>" . $title . "</h2>";
+    print "<ul class='postWidget'>";
     global $post;
     $tmp_post = $post;
     if ($cat == 7)
@@ -1021,13 +985,13 @@ class semiFooterWidget extends WP_Widget {
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-          <?php the_excerpt(); ?>
+      <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
     <?php
     $post = $tmp_post;
-    echo "</ul></div>";
+    print "</ul></div>";
   }
 
 }

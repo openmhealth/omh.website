@@ -134,8 +134,8 @@ if ($paged >= 2 || $page >= 2)
           var branding = $('#branding');
           $(document).scroll(function(){
              var scrollTop = win.scrollTop()
-             if(scrollTop > 410){
-               branding.css('top','-410px')
+             if(scrollTop > 437){
+               branding.css('top','-437px')
                $('#floatingLogo').fadeIn(1000)  
              }
              else{
