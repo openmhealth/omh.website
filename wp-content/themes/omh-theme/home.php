@@ -31,10 +31,8 @@ get_header();
 <?php get_sidebar(); ?>
 
 <div class="semiFooterRow">
-  <?php the_widget('omh_contributors'); ?> 
-    <a class="meet" href="/category/contributor">meet the rest of our contributors</a>
-  <!--center class="meet">
-  </center-->
+  <?php the_widget('semiFooterWidget', 'cat=7&title=Our Contributors'); ?> 
+  <a class="meet" href="/category/contributor/">meet more of our contributors</a>
 </div>
 
 

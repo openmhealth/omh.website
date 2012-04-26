@@ -28,8 +28,8 @@ get_header();
 
       <?php twentyeleven_content_nav('nav-above'); ?>
 
-    <h1 class="entry-title">The Blog</h1>
-    <br/>
+      <h1 class="entry-title">The Blog</h1>
+      <br/>
       <?php /* Start the Loop */ ?>
       <?php while (have_posts()) : the_post(); ?>
 
@@ -72,7 +72,7 @@ get_header();
 
 <?php // get_sidebar(); ?>
 <div class="semiFooterRow">
-  <?php the_widget('omh_contributors'); ?> 
-  <a class="meet" href="/community#people">meet the rest of our contributors</a>
+  <?php the_widget('semiFooterWidget', 'cat=7&title=Our Contributors'); ?> 
+  <a class="meet" href="/category/contributor/">meet more of our contributors</a>
 </div>
 <?php get_footer(); ?>
