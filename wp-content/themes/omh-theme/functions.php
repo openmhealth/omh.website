@@ -633,14 +633,14 @@ if (!function_exists('twentyeleven_comment')) :
       <li>
         <div class="postThumbnail">
           <a href="<?php the_permalink(); ?>">    
-      <?php the_post_thumbnail('large'); ?>
+            <?php the_post_thumbnail('large'); ?>
           </a>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -684,13 +684,13 @@ class omh_contributors extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-      <?php the_post_thumbnail('large'); ?>
+          <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -738,13 +738,13 @@ class omh_latest_posts extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-      <?php the_post_thumbnail('large'); ?>
+          <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -877,13 +877,13 @@ class more_contributors extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-      <?php the_post_thumbnail('large'); ?>
+          <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -926,13 +926,13 @@ class applications extends WP_Widget {
       ?>
       <li>
         <div class="postThumbnail">
-      <?php the_post_thumbnail('large'); ?>
+          <?php the_post_thumbnail('large'); ?>
         </div>
         <div class="title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -985,7 +985,7 @@ class semiFooterWidget extends WP_Widget {
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="description">
-      <?php the_excerpt(); ?>
+          <?php the_excerpt(); ?>
         </div>
       </li>
     <?php endforeach; ?>
@@ -997,4 +997,52 @@ class semiFooterWidget extends WP_Widget {
 }
 
 register_widget('semiFooterWidget');
+?>
+<?php
+/*
+ * ****************************************************************************
+ */
+class semiFooterCarousel extends WP_Widget {
+  function semiFooterCarousel() {
+    parent::WP_Widget(false, 'semiFooterCarousel');
+  }
+  function form($instance) {
+    // outputs the options form on admin  
+  }
+  function update($new_instance, $old_instance) {
+    // processes widget options to be saved  
+    return $new_instance;
+  }
+  function widget($instance, $args) {
+    $title = $args['title'];
+    $cat = intval($args['cat']);
+    print "<div class='postWidget carousel'>";
+    print "<div class='prev'></div>";
+    print "<div class='next'></div>";
+    print "<h2>" . $title . "</h2>";
+    print "<ul class='postWidget carousel-inner'>";
+    global $post;
+    $tmp_post = $post;
+    if ($cat == 7)
+      $q_args = array('numberposts' => 50, 'category' => $cat, 'order' => 'ASC');
+    else
+      $q_args = array('numberposts' => 50, 'category' => $cat);
+    $myposts = get_posts($q_args);
+    foreach ($myposts as $post) : setup_postdata($post);
+      ?>
+      <li class="item">
+        <div class="title">
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </div>
+        <div class="description">
+          <?php the_excerpt(); ?>
+        </div>
+      </li>
+    <?php endforeach; ?>
+    <?php
+    $post = $tmp_post;
+    print "</ul></div>";
+  }
+}
+register_widget('semiFooterCarousel');
 ?>

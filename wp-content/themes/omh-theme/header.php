@@ -71,6 +71,9 @@ if ($paged >= 2 || $page >= 2)
     <script type="text/javascript" 
             src="<?php echo get_template_directory_uri(); ?>/js/jquery.1.7.1.min.js">
     </script>
+    <script type="text/javascript" 
+            src="<?php echo get_template_directory_uri(); ?>/js/carousel.js">
+    </script>
   </head>
 
   <body <?php body_class(); ?>>
