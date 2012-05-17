@@ -33,17 +33,20 @@ global $page, $paged;
 wp_title('|', true, 'right');
 
 // Add the blog name.
-bloginfo('name');
+/*
+  bloginfo('name');
 
-// Add the blog description for the home/front page.
-$site_description = get_bloginfo('description', 'display');
-if ($site_description && ( is_home() || is_front_page() ))
+  // Add the blog description for the home/front page.
+  $site_description = get_bloginfo('description', 'display');
+  if ($site_description && ( is_home() || is_front_page() ))
   echo " | $site_description";
+ */
 
 // Add a page number if necessary:
 if ($paged >= 2 || $page >= 2)
   echo ' | ' . sprintf(__('Page %s', 'twentyeleven'), max($paged, $page));
 ?></title>
+
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,700|Open+Sans:600italic,400italic,400,600|Open+Sans+Condensed:700" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -68,6 +71,9 @@ if ($paged >= 2 || $page >= 2)
     <script type="text/javascript" 
             src="<?php echo get_template_directory_uri(); ?>/js/jquery.1.7.1.min.js">
     </script>
+    <script type="text/javascript" 
+            src="<?php echo get_template_directory_uri(); ?>/js/carousel.js">
+    </script>
   </head>
 
   <body <?php body_class(); ?>>
@@ -83,7 +89,7 @@ if ($paged >= 2 || $page >= 2)
             <input id="joinButton" type="submit" value="" />
           </form>
 
-          <form method="get" id="searchForm" action="http://omh.ideasphere.biz/">
+          <form method="get" id="searchForm" action="/">
             <input type="text" class="field" name="s" id="searchField" placeholder="">
             <input type="submit" class="submit" 
                    name="submit" id="searchButton" value="">
@@ -110,9 +116,9 @@ if ($paged >= 2 || $page >= 2)
                 ?>
                 <img class="header-img" src="<?php header_image(); ?>" 
                      style="width:670px; height:490px"/>
-                   <?php endif; // end check for featured image or standard header ?>
+                   <?php endif; // end check for featured image or standard header  ?>
             </a>
-          <?php endif; // end check for removed header image ?>
+          <?php endif; // end check for removed header image  ?>
         </div>
         <nav id="access" role="navigation">
           <a href="/" id="floatingLogo"></a>
@@ -148,6 +154,7 @@ if ($paged >= 2 || $page >= 2)
           $(win).scroll(function(){
              var scrollTop = win.scrollTop()
              if(scrollTop > 437){
+               //branding.css('top','-410px')
                branding.css('top','-437px')
                $('#floatingLogo').fadeIn(1000)  
              }

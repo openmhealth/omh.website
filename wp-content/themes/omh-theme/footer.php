@@ -31,7 +31,7 @@
       <a href="mailto:admin@openmhealth.org">admin@openmhealth.org</a>
     </div>
   </div>
-  <div class="disclaimer">Copyright 2012 Open mHealth, a project of the <a href="http://www.tides.org">Tides Center</a>. All Rights Reserved. | <a href="/privacy">Privacy</a> | <a href="/terms-of-use">Terms of Use</a>
+  <div class="disclaimer">Copyright 2012 Open mHealth, a project of the <a href="http://www.tides.org">Tides Center</a>. All Rights Reserved. | <a href="/media-asset-library">Media Kit</a> | <a href="/privacy">Privacy</a> | <a href="/terms-of-use">Terms of Use</a>
   </div>
 
 

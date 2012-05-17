@@ -23,7 +23,7 @@ get_header();
 
 
       <div class="apps">
-        <h1 class="entry-title">Applications <a href="submit-app">Submit an App</a></h1>
+        <h1 class="entry-title">Applications <br/><a class="btn" href="submit-app">Submit an App</a></h1>
         <?php
         $my_query = new WP_Query('category_name=application&posts_per_page=8');
         ?>
@@ -47,7 +47,7 @@ get_header();
       </div>
 
       <div class="projects">
-        <h1 class="entry-title">Projects <a href="submit-project">Submit a Project</a></h1>
+        <h1 class="entry-title">Projects <br/><a href="submit-project" class="btn">Submit a Project</a></h1>
         <?php
         $my_query = new WP_Query('category_name=project&posts_per_page=8');
         ?>
@@ -81,10 +81,8 @@ get_header();
 <script type="text/javascript">
   $("body").addClass("single")
 </script>
-
-
 <div class="semiFooterRow">
-  <?php the_widget('semiFooterWidget', 'cat=7&title=Our Contributors'); ?> 
+  <?php the_widget('semiFooterCarousel', 'cat=7&title=Our Contributors'); ?> 
   <a class="meet" href="/category/contributor/">meet more of our contributors</a>
 </div>
 <?php get_footer(); ?>

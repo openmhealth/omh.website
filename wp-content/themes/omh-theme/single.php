@@ -25,8 +25,8 @@ get_header();
 
       <nav id="nav-single">
         <h3 class="assistive-text"><?php _e('Post navigation', 'twentyeleven'); ?></h3>
-        <span class="nav-previous"><?php previous_post_link('%link', '&laquo; Previous', TRUE); //previous_post_link('%link', __('<span class="meta-nav">&larr;</span> Previous', 'twentyeleven'));  ?></span>
-        <span class="nav-next"><?php next_post_link('%link', 'Next &raquo;', TRUE); //next_post_link('%link', __('Next <span class="meta-nav">&rarr;</span>', 'twentyeleven'));  ?></span>
+        <span class="nav-previous"><?php previous_post_link('%link', '&laquo; Previous', TRUE); //previous_post_link('%link', __('<span class="meta-nav">&larr;</span> Previous', 'twentyeleven'));    ?></span>
+        <span class="nav-next"><?php next_post_link('%link', 'Next &raquo;', TRUE); //next_post_link('%link', __('Next <span class="meta-nav">&rarr;</span>', 'twentyeleven'));    ?></span>
       </nav><!-- #nav-single -->
 
       <?php get_template_part('content', 'single'); ?>
@@ -45,10 +45,10 @@ get_header();
   <?php
   ?>
   <?php if (in_array(7, $cats)): ?> 
-    <?php the_widget('semiFooterWidget', 'cat=13&title=Blog Atrivles'); ?> 
+    <?php the_widget('semiFooterWidget', 'cat=13&title=Blog Articles'); ?> 
     <a class="meet" href="/category/blog/">more articles</a>
   <?php else: ?>
-    <?php the_widget('semiFooterWidget', 'cat=7&title=Our Contributors'); ?> 
+    <?php the_widget('semiFooterCarousel', 'cat=7&title=Our Contributors'); ?> 
     <a class="meet" href="/category/contributor/">meet more of our contributors</a>
   <?php endif; ?>
 </div>

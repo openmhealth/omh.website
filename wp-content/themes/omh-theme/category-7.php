@@ -11,8 +11,8 @@ get_header();
 
 <section id="primary">
   <div id="content" role="main">
-
-    <?php if (have_posts()) : ?>
+    <?php $posts = query_posts($query_string . '&orderby=date&order=asc'); ?>
+    <?php if ($posts) : ?>
 
       <header class="page-header">
         <h1 class="page-title"><?php
@@ -28,8 +28,12 @@ get_header();
 
       <?php twentyeleven_content_nav('nav-above'); ?>
 
-    <h1 class="entry-title">Our Contributors</h1>
-    <br/>
+      <h1 class="entry-title">Our Contributors
+        <br/>
+        <a class="btn" href="/become-a-contributor/" 
+           style="font-weight:normal">Become a Contributor</a>
+      </h1>
+      <br/>
       <?php /* Start the Loop */ ?>
       <?php while (have_posts()) : the_post(); ?>
 
