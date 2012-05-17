@@ -134,7 +134,7 @@ if ($paged >= 2 || $page >= 2)
 
       <?php if (is_home()): ?>
         <script type = "text/javascript">
-                          
+                            
         var alertFallback = true;
         if (typeof console === "undefined" || typeof console.log === "undefined") {
             console = {};
@@ -146,7 +146,7 @@ if ($paged >= 2 || $page >= 2)
             console.log = function() {};
           }
         }
-                          
+                            
         var win = $(window)
         $(document).ready(function() {
           $('#floatingLogo').hide()
