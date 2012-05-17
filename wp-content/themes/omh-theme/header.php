@@ -128,11 +128,24 @@ if ($paged >= 2 || $page >= 2)
 
       <?php if (is_home()): ?>
         <script type = "text/javascript">
+                          
+        var alertFallback = true;
+        if (typeof console === "undefined" || typeof console.log === "undefined") {
+            console = {};
+            if (alertFallback) {
+              console.log = function(msg) {
+              alert(msg);
+            };
+          } else {
+            console.log = function() {};
+          }
+        }
+                          
         var win = $(window)
         $(document).ready(function() {
           $('#floatingLogo').hide()
           var branding = $('#branding');
-          $(document).scroll(function(){
+          $(win).scroll(function(){
              var scrollTop = win.scrollTop()
              if(scrollTop > 437){
                branding.css('top','-437px')
