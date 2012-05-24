@@ -3099,6 +3099,11 @@ footer #menu-main-menu-1 a {
     text-decoration: none;
 }
 
+.featuredProject .postThumbnail{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: #23353F 1px solid;
+}
 .postThumbnail img{
     width:100%;
 }
@@ -3347,6 +3352,10 @@ b{
     right:0;
 }
 
+.postWidget.carousel{
+    margin-top: 10px;
+}
+
 .carousel-inner{
     width: 10000px;
 }
@@ -3404,4 +3413,8 @@ b{
 
 body ul#sharebar {
     top:256px;
+}
+
+.widget-area div.postWidget{
+    margin-bottom: 20px;
 }

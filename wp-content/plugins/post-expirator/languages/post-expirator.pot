@@ -1,0 +1,308 @@
+# Copyright (C) 2012 Post Expirator
+# This file is distributed under the same license as the Post Expirator package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Post Expirator 1.5.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/post-expirator\n"
+"POT-Creation-Date: 2012-05-02 11:50:32+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: post-expirator.php:18
+msgid "l F jS, Y"
+msgstr ""
+
+#: post-expirator.php:19
+msgid "g:ia"
+msgstr ""
+
+#: post-expirator.php:20
+msgid "Post expires at EXPIRATIONTIME on EXPIRATIONDATE"
+msgstr ""
+
+#: post-expirator.php:44
+msgid "Once a Minute"
+msgstr ""
+
+#: post-expirator.php:56
+msgid "Post Expirator cron schedules need to be reset"
+msgstr ""
+
+#: post-expirator.php:58
+msgid "Click here to reset"
+msgstr ""
+
+#: post-expirator.php:156
+msgid "Expires"
+msgstr ""
+
+#: post-expirator.php:172
+msgid "Never"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Post Expirator 1.5.4)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: post-expirator.php:184 post-expirator.php:186 post-expirator.php:436
+msgid "Post Expirator"
+msgstr ""
+
+#: post-expirator.php:218
+msgid "Enable Post Expiration"
+msgstr ""
+
+#: post-expirator.php:220
+msgid "Year"
+msgstr ""
+
+#: post-expirator.php:221
+msgid "Month"
+msgstr ""
+
+#: post-expirator.php:222
+msgid "Day"
+msgstr ""
+
+#: post-expirator.php:251
+msgid "Hour"
+msgstr ""
+
+#: post-expirator.php:252
+msgid "Minute"
+msgstr ""
+
+#: post-expirator.php:262
+msgid "H"
+msgstr ""
+
+#: post-expirator.php:273
+msgid "Expiration Categories"
+msgstr ""
+
+#: post-expirator.php:283
+msgid ""
+"Setting an expiration category will change the category at expiration time, "
+"and override the default post action"
+msgstr ""
+
+#: post-expirator.php:408 post-expirator.php:436
+msgid "Post Expirator Options"
+msgstr ""
+
+#: post-expirator.php:411
+msgid "General Settings"
+msgstr ""
+
+#: post-expirator.php:412 post-expirator.php:687
+msgid "Upgrade"
+msgstr ""
+
+#: post-expirator.php:456
+msgid "Saved Options!"
+msgstr ""
+
+#: post-expirator.php:517
+msgid ""
+"The post expirator plugin sets a custom meta value, and then optionally "
+"allows you to select if you want the post changed to a draft status or "
+"deleted when it expires."
+msgstr ""
+
+#: post-expirator.php:520
+msgid "Valid [postexpirator] attributes:"
+msgstr ""
+
+#: post-expirator.php:522
+msgid "type - defaults to full - valid options are full,date,time"
+msgstr ""
+
+#: post-expirator.php:523
+msgid ""
+"dateformat - format set here will override the value set on the settings page"
+msgstr ""
+
+#: post-expirator.php:524
+msgid ""
+"timeformat - format set here will override the value set on the settings page"
+msgstr ""
+
+#: post-expirator.php:528
+msgid "Defaults"
+msgstr ""
+
+#: post-expirator.php:531
+msgid "Set Post To:"
+msgstr ""
+
+#: post-expirator.php:534 post-expirator.php:545
+msgid "Draft"
+msgstr ""
+
+#: post-expirator.php:535 post-expirator.php:546
+msgid "Delete"
+msgstr ""
+
+#: post-expirator.php:538
+msgid ""
+"Select whether the post should be deleted or changed to a draft at "
+"expiration time."
+msgstr ""
+
+#: post-expirator.php:542
+msgid "Set Page To:"
+msgstr ""
+
+#: post-expirator.php:549
+msgid ""
+"Select whether the page should be deleted or changed to a draft at "
+"expiration time."
+msgstr ""
+
+#: post-expirator.php:553
+msgid "Date Format:"
+msgstr ""
+
+#: post-expirator.php:557
+msgid ""
+"The default format to use when displaying the expiration date within a post "
+"using the [postexpirator] shortcode or within the footer.  For information "
+"on valid formatting options, see: <a href=\"http://us2.php.net/manual/en/"
+"function.date.php\" target=\"_blank\">PHP Date Function</a>."
+msgstr ""
+
+#: post-expirator.php:561
+msgid "Time Format:"
+msgstr ""
+
+#: post-expirator.php:565
+msgid ""
+"The default format to use when displaying the expiration time within a post "
+"using the [postexpirator] shortcode or within the footer.  For information "
+"on valid formatting options, see: <a href=\"http://us2.php.net/manual/en/"
+"function.date.php\" target=\"_blank\">PHP Date Function</a>."
+msgstr ""
+
+#: post-expirator.php:569
+msgid "Category Expiration"
+msgstr ""
+
+#: post-expirator.php:572
+msgid "Enable Post Expiration to Category?"
+msgstr ""
+
+#: post-expirator.php:574 post-expirator.php:603
+msgid "Enabled"
+msgstr ""
+
+#: post-expirator.php:575 post-expirator.php:604
+msgid "Disabled"
+msgstr ""
+
+#: post-expirator.php:577
+msgid "This will enable or disable the ability to expire a post to a category."
+msgstr ""
+
+#: post-expirator.php:581
+msgid "Default Expiration Category"
+msgstr ""
+
+#: post-expirator.php:592
+msgid "Set's the default expiration category for the post."
+msgstr ""
+
+#: post-expirator.php:597
+msgid "Post Footer Display"
+msgstr ""
+
+#: post-expirator.php:598
+msgid ""
+"Enabling this below will display the expiration date automatically at the "
+"end of any post which is set to expire."
+msgstr ""
+
+#: post-expirator.php:601
+msgid "Show in post footer?"
+msgstr ""
+
+#: post-expirator.php:606
+msgid ""
+"This will enable or disable displaying the post expiration date in the post "
+"footer."
+msgstr ""
+
+#: post-expirator.php:610
+msgid "Footer Contents:"
+msgstr ""
+
+#: post-expirator.php:614
+msgid ""
+"Enter the text you would like to appear at the bottom of every post that "
+"will expire.  The following placeholders will be replaced with the post "
+"expiration date in the following format:"
+msgstr ""
+
+#: post-expirator.php:623
+msgid "Footer Style:"
+msgstr ""
+
+#: post-expirator.php:626
+msgid "This post will expire on"
+msgstr ""
+
+#: post-expirator.php:628
+msgid "The inline css which will be used to style the footer text."
+msgstr ""
+
+#: post-expirator.php:633
+msgid "Save"
+msgstr ""
+
+#: post-expirator.php:676
+msgid "Cron Schedules Reset!"
+msgstr ""
+
+#: post-expirator.php:681
+msgid "OK"
+msgstr ""
+
+#: post-expirator.php:683
+msgid "RESET NEEDED"
+msgstr ""
+
+#: post-expirator.php:690
+msgid "Reset Cron Schedules:"
+msgstr ""
+
+#: post-expirator.php:692
+msgid "Reset"
+msgstr ""
+
+#: post-expirator.php:693
+msgid "Status:"
+msgstr ""
+
+#: post-expirator.php:695
+msgid "Resets the cron scheduler and removes any old or stray entries."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/post-expirator/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Allows you to add an expiration date (minute) to posts which you can "
+"configure to either delete the post, change it to a draft, or update the "
+"post categories at expiration time."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Aaron Axelsen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://postexpirator.tuxdocs.net/"
+msgstr ""
